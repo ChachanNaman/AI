@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGroq(model="llama-3.1-8b-instant")
+llm = ChatGroq(model="llama-3.1-8b-instant", max_completion_tokens=20)
 
 result = llm.invoke("What is the capital of India?")
-print(result.content)
+print(result.content)  #fetch content to see the result only
