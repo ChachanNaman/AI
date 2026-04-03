@@ -6,7 +6,12 @@ load_dotenv()
 
 st.header('Research Centre')
 
+model = ChatGroq(
+    model="llama-3.1-8b-instant"
+)
+
 user_input = st.text_input('Enter your prompt')
 
-if st.button:
-    st.text('Some random text')
+if st.button('Summarize'):
+    result = model.invoke(user_input)
+    st.write(result.content)
