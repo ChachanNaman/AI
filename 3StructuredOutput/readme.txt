@@ -29,3 +29,16 @@ typedDict :
 -> first you define class or metadata and with help of this i form dictonaries 
 -> doesnt have validation means you can still miswrite the datatype format 
 
+Pydantic : 
+-> its a data validation and data parsing library for python. it ensures that data you work with is correct, structured, and type-safe
+-> thats why this is used in building fastAPI coz there we need str data
+-> there are default values, optional values Optional[int] = None
+-> Coerce : Pydantic is smart enough that if we pass str in age then it will automatically parse it to int and print int value 
+-> Pydantic have Email vlidation built in(EmailStr) means if i pass wrong formal mail it will throw error
+-> Field includes many options for options like cgpa
+
+**IMP : 
+-> when we calling with_structured_output(method) 
+-> this method have two types -> [json mode] : when we need output in json format 
+                           -> function calling : when we need ouput by calling agent (ex :when openai working)
+-> some models doesnt support with_structured_output like huggingface models, there we need to parse output manually 
